@@ -1,10 +1,17 @@
+import Character from './modules/character.js'
+
 function setup() {
     createCanvas(windowWidth, windowHeight)
-    // fullscreen()
-    background(100)
+    background(0)
     // other stuff...
 }
 
 function draw() {
-    circle(windowWidth / 2, windowHeight / 2, 100)
+    background(0, 0.2)
+    myChar = new Character(100, windowWidth / 2 + frameCount, windowHeight / 2)
+    myChar.display()
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight)
 }
